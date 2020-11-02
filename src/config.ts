@@ -1,0 +1,1 @@
+export const baseUrl: string = 'http://localhost:3000' // 后端服务的请求地址

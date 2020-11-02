@@ -4,8 +4,8 @@ export default {
   ],
   window: {
     backgroundTextStyle: 'light',
-    navigationBarBackgroundColor: '#fff',
-    navigationBarTitleText: 'WeChat',
-    navigationBarTextStyle: 'black'
+    navigationBarBackgroundColor: '#d43c33',
+    navigationBarTitleText: '网易云音乐',
+    navigationBarTextStyle: 'white'
   }
 }
