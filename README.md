@@ -8,7 +8,7 @@
 ## constants   项目中的常量定义
 ## hooks 自定义hooks函数
 ## pages  页面业务逻辑
-## reducers  `redux`中的相关同步操作在这里进行
+## reducers  `redux`中的相关同步操作在这里定义，action如何改变state树
 ## services 定义api
 ## store  redux的初始文件
 ## utils 自定义通用方法
