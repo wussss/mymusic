@@ -1,5 +1,31 @@
-.index {
-  display:flex;
+@import "../../base.scss";
+
+.index_container {
+  display: flex;
   flex-direction: column;
   width: 100%;
+  .switch-tab {
+    display: flex;
+    flex-flow: row nowrap;
+    position: fixed;
+    z-index: 5;
+    bottom: 0;
+    width: 100%;
+    /* prettier-ignore */
+    height:40PX;
+    .tab {
+      width: 50%;
+      :after {
+        border: none;
+        border-radius: 0px;
+        /* prettier-ignore */
+        border-right: 0.5PX solid #d4d0d0;
+      }
+      .tab-button {
+        /* prettier-ignore */
+        color: $text-color;
+        border:none;
+      }
+    }
+  }
 }

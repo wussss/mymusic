@@ -1,0 +1,29 @@
+@font-face {font-family: "iconfont";
+  src: url('iconfont.eot?t=1604408615847'); /* IE9 */
+  src: url('iconfont.eot?t=1604408615847#iefix') format('embedded-opentype'), /* IE6-IE8 */
+  url('data:application/x-font-woff2;charset=utf-8;base64,d09GMgABAAAAAAPoAAsAAAAACEQAAAOcAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAHEIGVgCDHAqDeINLATYCJAMQCwoABCAFhG0HTRtCB8gekqSLDQqoPQcAFiRAPHzt93ru7v0vG0KFKDOxPD4qDktg6yurWlelq2pUWQIakaFxdhOe0O0TpAahAUCS2o7mNMC2wpyrQxlVgimWwfsvPAXI+IEwk2JuF4eqmecJ0HyLxWWOwblQLoChsTVAY4221C3aklbI+gDPMEnnaQID5klDnMKnV82TnEmBeBZIE80rqWRPdmhC17IyxRuA0cor5AbQvI5/P/6DReApepUz8+zBLteWvzSfPFFJ1CTgEiIAez0DpHVU7AKSeNRqusNMQ7tQBoz+ln1A0xTW6nB/8qRSiXMXUXP/5RGKSnSczCGwR+HKL02fSvDLnUrhl6dKRXSOb+jHWw34DtjZniHlGJk8kiuC4UPPkwqYiUVFCNzLYjZSYSGI/XBoe3Bgc3Rkd3ycMIp05Nvjd9g0t7LbfDLb/LZx2f+w2b6+ftB/W5FBlcVDntIk9ooDY+EB5QM7Yg7rEmQdOuIsS+bqnvwHObIZUB5YYS/hKB1VYRlUKSSRPtgPq7ENj7OVc5atqQ6pum01hlEOG2URWEQ5HnEPsFilBtDv7zng0kNGkJPHqZehNjdRyC9jBvJ4HOcsc6nB0Z/Zw45BEtdGzJKUzPIdoM51cb9eINV/y2T8Mao2+gHF8EqR5cU2RTHhk5mItaf6otRR9REANz1Hjxp2rj1u71SVkDQ2mvRvfwfrLToGaFIw9V1ycc2J78aCGuV0z94jMhITDQ+kh8rIyPG6ByI+NNFdXHUTohM9EEDGaTv9NUXD7UxhRunHxMPajpLC7VW71QgEO196n93ptH/wpE9a9m05QgydtzMJ5rH/LvZo9v/KHlmQJtdRZ+o8n2WZ00UhQcGAq+XfjDHhag3J9OgAoZXYEhR95qBqVpGJ3YWeQXvQaQ5gwA7K+kGTQpgi+7EtHSCM6YZixHuoxmwiE3sJPTNeoDMWKBhwHkw7DlqPQKJRCCY15uA1QGAmBfG0dZBkPyNtWFIWuTHhHcvq5gUFWflq9IACyzXmhLZ0EVYT8CslBwjnIWMSgkp5x6yeBNS1CuXk/NpeaeItuRY4UUKJGsoBLwMQKCMJJCxdC2o//wxRDSZR9uQ1aN+hUuXWPVAgS34E8iASo/Ke5SWhWtRCmBoB/JQkDkAwIOaGJBDUPuwOZWoTATMCSkiOivmNFU32l/BvuA4GOHMyStTI6Bl+4Vu+j/4Ji9hNoG8cWGWyOmhwLUIkuTHUNA==') format('woff2'),
+  url('iconfont.woff?t=1604408615847') format('woff'),
+  url('iconfont.ttf?t=1604408615847') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+ */
+  url('iconfont.svg?t=1604408615847#iconfont') format('svg'); /* iOS 4.1- */
+}
+
+.iconfont {
+  font-family: "iconfont" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-vertical_line:before {
+  content: "\e63a";
+}
+
+.icon-Discovery:before {
+  content: "\e65f";
+}
+
+.icon-Profile:before {
+  content: "\e661";
+}
+

@@ -1,13 +1,29 @@
 /* eslint-disable jsx-quotes */
 import React from "react";
 import Taro from "@tarojs/taro";
-import { View, Text } from "@tarojs/components";
+import { Text, View, Button } from "@tarojs/components";
+import classnames from "classnames";
+import "../../statics/iconfont/iconfont.scss";
 import "./index.scss";
 
 const Index: Taro.FC = () => {
+  const isVisible = false;
   return (
-    <View className="index">
-      <Text>这是我的第一个Taro项目</Text>
+    <View
+      className={classnames({
+        index_container: true,
+        visible: !!isVisible,
+      })}
+    >
+      <Text>暂无数据</Text>
+      <View className="switch-tab">
+        <View className="tab">
+          <Button className="tab-button">发现</Button>
+        </View>
+        <View className="tab">
+          <Button className="tab-button">我的</Button>
+        </View>
+      </View>
     </View>
   );
 };

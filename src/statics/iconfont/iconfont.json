@@ -1,0 +1,30 @@
+{
+  "id": "2178848",
+  "name": "mymusic",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "551844",
+      "name": "竖线",
+      "font_class": "vertical_line",
+      "unicode": "e63a",
+      "unicode_decimal": 58938
+    },
+    {
+      "icon_id": "17964052",
+      "name": "Discovery",
+      "font_class": "Discovery",
+      "unicode": "e65f",
+      "unicode_decimal": 58975
+    },
+    {
+      "icon_id": "17964062",
+      "name": "Profile",
+      "font_class": "Profile",
+      "unicode": "e661",
+      "unicode_decimal": 58977
+    }
+  ]
+}
