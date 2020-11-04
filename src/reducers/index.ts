@@ -1,6 +1,6 @@
 import { combineReducers } from "redux";
-import { playlist } from "./playlist";
+import { home_reducer } from "./home_reducer";
 
 export default combineReducers({
-  playlist,
+  home_reducer,
 });

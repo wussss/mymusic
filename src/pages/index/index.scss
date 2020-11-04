@@ -3,11 +3,63 @@
 .index_container {
   @include flex-column;
   width: 100%;
-  .recommend_playlist_content {
-    width: 90%;
-    margin:0 auto;
+  .banner {
+    /* prettier-ignore */
+    height: 140PX;
+    width: 94%;
+    .banner_image {
+      height: 100%;
+      width: 100%;
+      border-radius: 10px;
+    }
+  }
+  .line_between {
+    width: 100%;
+    border: none;
+    /* prettier-ignore */
+    border-bottom: 0.5PX solid #ebe5e5;
+    /* prettier-ignore */
+    margin-bottom: 10PX;
+  }
+  .daily_list {
+    /* prettier-ignore */
+    height: 55PX;
     @include flex-row;
-    justify-content: space-between;
+    width: 80%;
+
+    /* prettier-ignore */
+    margin: 15PX auto;
+    /* prettier-ignore */
+    .iconfont {
+      /* prettier-ignore */
+      font-size:30PX;
+      color: $primary-color;
+      /* prettier-ignore */
+      @include flex-column;
+      align-items: center;
+    }
+    .icon_text {
+      color: $text-color;
+      /* prettier-ignore */
+      font-size: 15PX;
+      position: relative;
+      /* prettier-ignore */
+    }
+  }
+  .recommend_playlist {
+    @include flex-column;
+    width: 94%;
+    margin: 0 auto;
+    .recommend_playlist_title {
+      color: $text-color;
+      /* prettier-ignore */
+      position:relative;
+      /* prettier-ignore */
+      left: -140PX;
+    }
+    .recommend_playlist_content {
+      @include flex-row;
+    }
   }
   .switch-tab {
     @include flex-row;
