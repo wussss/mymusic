@@ -6,11 +6,60 @@
   "description": "",
   "glyphs": [
     {
-      "icon_id": "551844",
-      "name": "竖线",
-      "font_class": "vertical_line",
-      "unicode": "e63a",
-      "unicode_decimal": 58938
+      "icon_id": "714765",
+      "name": "我的",
+      "font_class": "wode",
+      "unicode": "e646",
+      "unicode_decimal": 58950
+    },
+    {
+      "icon_id": "1621097",
+      "name": "播放",
+      "font_class": "play",
+      "unicode": "e6fd",
+      "unicode_decimal": 59133
+    },
+    {
+      "icon_id": "3217845",
+      "name": "播放",
+      "font_class": "icon-",
+      "unicode": "e615",
+      "unicode_decimal": 58901
+    },
+    {
+      "icon_id": "3851336",
+      "name": "菜单",
+      "font_class": "caidan",
+      "unicode": "e655",
+      "unicode_decimal": 58965
+    },
+    {
+      "icon_id": "4889802",
+      "name": "我的",
+      "font_class": "wode1",
+      "unicode": "e622",
+      "unicode_decimal": 58914
+    },
+    {
+      "icon_id": "5876278",
+      "name": "下一曲",
+      "font_class": "xiayiqu",
+      "unicode": "e7ff",
+      "unicode_decimal": 59391
+    },
+    {
+      "icon_id": "5876279",
+      "name": "上一曲",
+      "font_class": "shangyiqu",
+      "unicode": "e800",
+      "unicode_decimal": 59392
+    },
+    {
+      "icon_id": "13646166",
+      "name": "播放",
+      "font_class": "bofang",
+      "unicode": "e60c",
+      "unicode_decimal": 58892
     },
     {
       "icon_id": "17964052",

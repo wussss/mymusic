@@ -1,0 +1,41 @@
+@import "../../base.scss";
+
+.square {
+  position: relative;
+  /* prettier-ignore */
+  width: 105PX;
+  /* prettier-ignore */
+  image {
+    /* prettier-ignore */
+    width: 100PX;
+    /* prettier-ignore */
+    height:100PX;
+    /* prettier-ignore */
+    border-radius: 10PX;
+    /* prettier-ignore */
+    margin: 5PX;
+  }
+  .play {
+    position: absolute;
+    /* prettier-ignore */
+    top: 10PX;
+    /* prettier-ignore */
+    right: 5PX;
+    /* prettier-ignore */
+    font-size: 12PX;
+    color: white;
+    font-weight: bold;
+  }
+  .name {
+    /* prettier-ignore */
+    height:44PX;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    /* prettier-ignore */
+    margin-left:5PX;
+    /* prettier-ignore */
+    margin-top: -6PX;
+    /* prettier-ignore */
+    font-size:15PX;
+  }
+}

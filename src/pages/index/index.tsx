@@ -1,11 +1,12 @@
 /* eslint-disable jsx-quotes */
 import React, { useEffect } from "react";
 import Taro from "@tarojs/taro";
-import { View, Button, Image } from "@tarojs/components";
+import { View, Button } from "@tarojs/components";
 import classnames from "classnames";
 import { connect } from "react-redux";
 import "../../statics/iconfont/iconfont.scss";
 import "./index.scss";
+import { PlayList } from "../../components/playlist/index";
 import { getRecommendPlayList } from "../../actions/playlist"; //1、定义组件自己的异步方法
 
 interface StateProps {
@@ -27,7 +28,7 @@ const Index: Taro.FC<IProps> = (props) => {
     props.getRecommendPlayList();
   };
   const isVisible = false;
-  useEffect(renderPage, [recommendPlayList]);
+  useEffect(renderPage, []);
   return (
     <View
       className={classnames({
@@ -40,7 +41,13 @@ const Index: Taro.FC<IProps> = (props) => {
         <View className="recommend_playlist_title">推荐歌单</View>
         <View className="recommend_playlist_content">
           {recommendPlayList?.map((item) => (
-            <Image key={item.id} src={item.picUrl}></Image>
+            <View key={item.id}>
+              <PlayList
+                count={item.playCount}
+                src={item.picUrl}
+                name={item.name}
+              />
+            </View>
           ))}
         </View>
       </View>

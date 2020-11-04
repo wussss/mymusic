@@ -3,6 +3,12 @@
 .index_container {
   @include flex-column;
   width: 100%;
+  .recommend_playlist_content {
+    width: 90%;
+    margin:0 auto;
+    @include flex-row;
+    justify-content: space-between;
+  }
   .switch-tab {
     @include flex-row;
     position: fixed;
