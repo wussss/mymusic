@@ -1,0 +1,23 @@
+@import "../../base.scss";
+
+.modal {
+  @include modalStyle;
+  .login {
+    background: white;
+    /* prettier-ignore */
+    border-radius: 5PX;
+    width: 80%;
+    /* prettier-ignore */
+    margin: 20% auto;
+    @include flex-column;
+    /* prettier-ignore */
+    border-radius: 5PX;
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.1);
+    .input_list {
+      width:100%;
+      .input_item {
+        @include inputView;
+      }
+    }
+  }
+}

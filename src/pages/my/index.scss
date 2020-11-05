@@ -1,0 +1,28 @@
+@import "../../base.scss";
+
+.mypage{
+  .switch-tab {
+    @include flex-row;
+    position: fixed;
+    z-index: 5;
+    bottom: 0;
+    width: 100%;
+    /* prettier-ignore */
+    height:40PX;
+    .tab {
+      width: 50%;
+      ::after {
+        /* prettier-ignore */
+        border-radius: 0PX;
+        border: none;
+        border-right: 0.5px solid #ebe5e5;
+      }
+      .tab-button {
+        color: $text-color;
+        border: none;
+        /* prettier-ignore */
+        border-radius: 0PX;
+      }
+    }
+  }
+}

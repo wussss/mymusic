@@ -1,6 +1,6 @@
 /* eslint-disable jsx-quotes */
 import React, { useEffect } from "react";
-import Taro from "@tarojs/taro";
+import Taro, { redirectTo } from "@tarojs/taro";
 import {
   View,
   Button,
@@ -17,6 +17,7 @@ import { PlayList } from "../../components/playlist/index";
 import { Banner } from "../../components/banner/index";
 import { getRecommendPlayList, getBanner } from "../../actions/home_action"; //1、定义组件自己的异步方法
 import api from "../../services/api";
+
 
 interface StateProps {
   recommendPlayList: Array<{
@@ -52,6 +53,9 @@ const Index: Taro.FC<IProps> = (props) => {
   //     console.log(res.data.banners);
   //   });
   // };//测试拿到的数据类型
+  const switchTab = () => {
+    redirectTo({ url: '../my/index' });
+  };
   useEffect(renderPage, []);
   return (
     <View
@@ -115,7 +119,9 @@ const Index: Taro.FC<IProps> = (props) => {
           </Button>
         </View>
         <View className="tab">
-          <Button className="tab-button">我的</Button>
+          <Button className="tab-button" onClick={switchTab}>
+            我的
+          </Button>
         </View>
       </View>
     </View>
