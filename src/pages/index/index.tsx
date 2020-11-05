@@ -7,7 +7,6 @@ import {
   Text,
   Swiper,
   SwiperItem,
-  Image,
   Input,
 } from "@tarojs/components";
 import classnames from "classnames";
@@ -15,6 +14,7 @@ import { connect } from "react-redux";
 import "../../statics/iconfont/iconfont.scss";
 import "./index.scss";
 import { PlayList } from "../../components/playlist/index";
+import { Banner } from "../../components/banner/index";
 import { getRecommendPlayList, getBanner } from "../../actions/home_action"; //1、定义组件自己的异步方法
 import api from "../../services/api";
 
@@ -68,13 +68,14 @@ const Index: Taro.FC<IProps> = (props) => {
         indicatorColor="#999"
         indicatorActiveColor="#d43c33"
         easingFunction="easeInOutCubic"
+        nextMargin="-5PX"
         indicatorDots
         autoplay
         circular
       >
         {banners.map((item) => (
           <SwiperItem key={item.bannerId}>
-            <Image src={item.pic} className="banner_image"></Image>
+            <Banner pic={item.pic} typeTitle={item.typeTitle} titleColor={item.titleColor} />
           </SwiperItem>
         ))}
       </Swiper>

@@ -1,0 +1,22 @@
+@import "../../base.scss";
+.banner {
+  position: relative;
+  .banner_image {
+    height: 100%;
+    width: 100%;
+    border-radius: 10px;
+  }
+  .type_title {
+    color: white;
+    display: inline-block;
+    /* prettier-ignore */
+    padding:10PX;
+    /* prettier-ignore */
+    border-top-left-radius: 10PX;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    /* prettier-ignore */
+    font-size: 15PX;
+  }
+}
