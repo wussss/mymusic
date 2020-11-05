@@ -1,4 +1,4 @@
-$primary-color: #C01D19;
+$primary-color: #c01d19;
 $text-color: #201f1f;
 $background-color: #f0f0f0;
 
@@ -17,4 +17,23 @@ $background-color: #f0f0f0;
   display: flex;
   flex-flow: column nowrap;
   align-items: center;
+  justify-content: space-between;
+}
+@mixin inputView {
+  width: 80%;
+  /* prettier-ignore */
+  height:30PX;
+  /* prettier-ignore */
+  font-size: 15PX;
+  /* prettier-ignore */
+  border-radius:3PX;
+  /* prettier-ignore */
+  border: 1PX solid #a19e9e;
+  @include flex-row;
+  /* prettier-ignore */
+  margin-bottom:5PX;
+  /* prettier-ignore */
+  margin-top:5PX;
+  /* prettier-ignore */
+  padding-left:5PX;
 }

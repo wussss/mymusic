@@ -60,22 +60,25 @@ const Index: Taro.FC<IProps> = (props) => {
         visible: !!isVisible,
       })}
     >
-      <View className="search">
-        <Input></Input>
+      <View className="search iconfont icon-search">
+        <Input placeholder="搜索"></Input>
       </View>
       <Swiper
         className="banner"
         indicatorColor="#999"
         indicatorActiveColor="#d43c33"
         easingFunction="easeInOutCubic"
-        nextMargin="-5PX"
         indicatorDots
         autoplay
         circular
       >
         {banners.map((item) => (
           <SwiperItem key={item.bannerId}>
-            <Banner pic={item.pic} typeTitle={item.typeTitle} titleColor={item.titleColor} />
+            <Banner
+              pic={item.pic}
+              typeTitle={item.typeTitle}
+              titleColor={item.titleColor}
+            />
           </SwiperItem>
         ))}
       </Swiper>

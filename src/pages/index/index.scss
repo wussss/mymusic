@@ -3,10 +3,13 @@
 .index_container {
   @include flex-column;
   width: 100%;
+  .search {
+    @include inputView
+  }
   .banner {
     /* prettier-ignore */
     height: 160PX;
-    width: 98%;
+    width: 97%;
   }
   .line_between {
     width: 100%;
