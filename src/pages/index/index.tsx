@@ -1,6 +1,6 @@
 /* eslint-disable jsx-quotes */
 import React, { useEffect } from "react";
-import Taro, { redirectTo } from "@tarojs/taro";
+import Taro, { redirectTo, navigateTo } from "@tarojs/taro";
 import {
   View,
   Button,
@@ -17,7 +17,6 @@ import { PlayList } from "../../components/playlist/index";
 import { Banner } from "../../components/banner/index";
 import { getRecommendPlayList, getBanner } from "../../actions/home_action"; //1、定义组件自己的异步方法
 import api from "../../services/api";
-
 
 interface StateProps {
   recommendPlayList: Array<{
@@ -41,8 +40,7 @@ interface DispatchProps {
 type IProps = StateProps & DispatchProps;
 
 const Index: Taro.FC<IProps> = (props) => {
-  const recommendPlayList = props.recommendPlayList; //2、定义组件自己的数据，名字自定义，不用和props里的一样
-  const banners = props.banners;
+  const { recommendPlayList, banners } = props; //2、定义组件自己的数据，名字自定义，不用和props里的一样
   const renderPage = () => {
     props.getBanner();
     props.getRecommendPlayList();
@@ -53,15 +51,20 @@ const Index: Taro.FC<IProps> = (props) => {
   //     console.log(res.data.banners);
   //   });
   // };//测试拿到的数据类型
+  const getDetail = (item) => {
+    navigateTo({
+      url: `../playlistdetail/index?id=${item.id}`,
+    });
+  };
   const switchTab = () => {
-    redirectTo({ url: '../my/index' });
+    redirectTo({ url: "../my/index" });
   };
   useEffect(renderPage, []);
   return (
     <View
       className={classnames({
         index_container: true,
-        visible: !!isVisible,
+        hasMusicBox: !!isVisible,
       })}
     >
       <View className="search iconfont icon-search">
@@ -102,7 +105,12 @@ const Index: Taro.FC<IProps> = (props) => {
         <View className="recommend_playlist_title">推荐歌单</View>
         <View className="recommend_playlist_content">
           {recommendPlayList?.map((item) => (
-            <View key={item.id}>
+            <View
+              key={item.id}
+              onClick={() => {
+                getDetail(item);
+              }}
+            >
               <PlayList
                 count={item.playCount}
                 src={item.picUrl}

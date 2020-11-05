@@ -1,7 +1,7 @@
 //异步actions
 
 import api from "../services/api";
-import { Get_Recommend_List, Get_Banners } from "../constants/playlist";
+import { Get_Recommend_List, Get_Banners } from "../constants/action_type";
 
 export const getRecommendPlayList = () => {
   return (dispatch) => {

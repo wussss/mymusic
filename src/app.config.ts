@@ -2,6 +2,7 @@ export default {
   pages: [
     'pages/index/index',
     'pages/my/index',
+    'pages/playlistdetail/index'
   ],
   window: {
     backgroundTextStyle: 'light',
