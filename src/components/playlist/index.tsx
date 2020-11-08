@@ -7,7 +7,7 @@ import "../../statics/iconfont/iconfont.scss";
 import "./index.scss";
 
 interface IProps {
-  name: string;
+  name?: string;
   src: string;
   count: number;
 }
@@ -17,7 +17,7 @@ export const PlayList: Taro.FC<IProps> = (props) => {
     <View className="square">
       <Image src={src} />
       <View className="iconfont icon-icon- play">{formatCount(count)}</View>
-      <View className="name">{name}</View>
+      {name && <View className="name">{name}</View>}
     </View>
   );
 };

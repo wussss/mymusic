@@ -1,0 +1,53 @@
+@import "../../base.scss";
+
+.song {
+  @include flex-row;
+  width: 95%;
+  /* prettier-ignore */
+  margin: 5PX auto;
+  .info {
+    @include flex-row;
+    width: 90%;
+    .xuhao {
+      color: #524f4f;
+      /* prettier-ignore */
+      font-size:16PX;
+      /* prettier-ignore */
+      margin-right:10PX;
+    }
+    .info1 {
+      @include flex-column;
+      width: 85%;
+      align-items: flex-start;
+      .info2 {
+        /* prettier-ignore */
+        margin-top:5PX;
+        @include flex-row;
+        width: 90%;
+        justify-content: flex-start;
+        @include text-ellipsis;
+        .dujia {
+          border: 1px solid $primary-color;
+          color: $primary-color;
+          /* prettier-ignore */
+          padding:2PX;
+          /* prettier-ignore */
+          font-size: 8PX;
+          /* prettier-ignore */
+          margin-right: 5PX;
+        }
+        .zhuanji {
+          color: #524f4f;
+          /* prettier-ignore */
+          font-size: 13PX;
+          /* prettier-ignore */
+        }
+      }
+    }
+  }
+  .mv {
+    /* prettier-ignore */
+    font-size: 20PX;
+    color: #524f4f;
+  }
+}

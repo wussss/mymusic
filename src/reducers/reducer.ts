@@ -2,6 +2,7 @@ import {
   Get_Recommend_List,
   Get_Banners,
   Get_PlayList_Datail,
+  Clear_PlayList_Datail,
 } from "../constants/action_type";
 import { IDefaultState } from "../constants/commonType";
 
@@ -34,6 +35,12 @@ export const home_reducer = (prevState = defaultState, action) => {
     case Get_PlayList_Datail:
       const { playlist } = payload;
       return { ...prevState, playlist };
+    case Clear_PlayList_Datail:
+      return {
+        recommendPlayList: prevState.recommendPlayList,
+        banners: prevState.banners,
+        playlist: payload,
+      };
     default:
       return prevState;
   }

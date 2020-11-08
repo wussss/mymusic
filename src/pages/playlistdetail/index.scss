@@ -1,4 +1,89 @@
 @import "../../base.scss";
 
 .playlist-detail {
+  @include flex-column;
+  align-items: flex-start;
+  position: relative;
+  justify-content: flex-start;
+  .background_image {
+    @include background_image;
+  }
+  .playlist_info {
+    @include flex-column;
+    justify-content: flex-start;
+    .header {
+      @include flex-row;
+      /* prettier-ignore */
+      margin-top:5PX;
+      width: 100%;
+      .info {
+        width: 60%;
+        /* prettier-ignore */
+        margin-right: 20PX;
+        @include flex-column;
+        align-items: flex-start;
+        .name {
+          white-space: wrap;
+          /* prettier-ignore */
+          font-size:16PX;
+          /* prettier-ignore */
+          font-weight:bold;
+        }
+        .creator {
+          @include flex-row;
+          /* prettier-ignore */
+          margin:10PX 0;
+          .avatar {
+            /* prettier-ignore */
+            width: 30PX;
+            /* prettier-ignore */
+            height: 30PX;
+            /* prettier-ignore */
+            border-radius:15PX;
+            /* prettier-ignore */
+            margin-right:5PX;
+          }
+        }
+        .tags {
+          @include flex-row;
+          .tag {
+            background: rgba(189, 5, 5, 0.5);
+            /* prettier-ignore */
+            margin-right:5PX;
+            /* prettier-ignore */
+            width:60PX;
+            /* prettier-ignore */
+            /* prettier-ignore */
+            border-radius: 5PX;
+            /* prettier-ignore */
+            border:none;
+            color: white;
+            text-align: center;
+            /* prettier-ignore */
+            font-size:14PX;
+          }
+        }
+      }
+    }
+    .description {
+      white-space: wrap;
+      /* prettier-ignore */
+      font-size:14PX;
+      /* prettier-ignore */
+      text-indent:8PX;
+      /* prettier-ignore */
+      margin: 5PX 0;
+    }
+  }
+  .songs {
+    @include flex-column;
+    align-items: flex-start;
+    background: white;
+    width: 90%;
+    /* prettier-ignore */
+    border-radius:20PX;
+     /* prettier-ignore */
+    padding: 10PX;
+    margin:0 auto;
+  }
 }
