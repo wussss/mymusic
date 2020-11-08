@@ -18,10 +18,9 @@ export const getPlayListDetail = (id: number) => {
   };
 };
 export const clearPlayListDetail = () => {
-  const playlist = {};
   const action = {
     type: Clear_PlayList_Datail,
-    payload: playlist
+    payload: {}
   };
   return action;
 };

@@ -1,8 +1,10 @@
 export default {
   pages: [
+    //'pages/playlistdetail/index',
     'pages/index/index',
     'pages/my/index',
-    'pages/playlistdetail/index'
+    'pages/playlistdetail/index',
+    'pages/songdetail/index'
   ],
   window: {
     backgroundTextStyle: 'light',

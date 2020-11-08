@@ -33,14 +33,11 @@ export const home_reducer = (prevState = defaultState, action) => {
       const { banners } = payload;
       return { ...prevState, banners };
     case Get_PlayList_Datail:
-      const { playlist } = payload;
+      let { playlist } = payload;
       return { ...prevState, playlist };
     case Clear_PlayList_Datail:
-      return {
-        recommendPlayList: prevState.recommendPlayList,
-        banners: prevState.banners,
-        playlist: payload,
-      };
+      playlist = payload;
+      return { ...prevState, playlist };
     default:
       return prevState;
   }

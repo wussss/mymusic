@@ -8,7 +8,10 @@ import {
   getPlayListDetail,
   clearPlayListDetail,
 } from "../../actions/playlist_detail";
-import { playListDetailInfoType } from "../../constants/commonType";
+import {
+  playListDetailInfoType,
+  MusicItemType,
+} from "../../constants/commonType";
 import { PlayList } from "../../components/playlist";
 import { Song } from "../../components/song";
 import "../../statics/iconfont/iconfont.scss";
@@ -26,14 +29,19 @@ type IProps = StateProps & DispatchProps;
 const PlayListDetail: Taro.FC<IProps> = (props) => {
   const { id } = Taro.getCurrentInstance()?.router?.params || {};
   const newId = Number(id || 0);
+  //const newId: number = 423015580; //方便调试
   const renderPage = () => {
     props.getPlayListDetail(newId);
   };
-  // useWillUnmount(() => {
-  //   props.clearPlayListDetail();
-  //   console.log("store will be clear");
-  // }); //页面卸载时
   useEffect(renderPage, [id]);
+  useWillUnmount(() => {
+    props.clearPlayListDetail();
+    console.log("store will be clear");
+  }); //页面卸载时
+  const onPlay = (item: MusicItemType) => {
+    console.log(item.name);
+    Taro.navigateTo({ url: `../songdetail/index?id=${item.id}` });
+  };
   const {
     coverImgUrl,
     name,
@@ -44,50 +52,67 @@ const PlayListDetail: Taro.FC<IProps> = (props) => {
     playCount,
   } = props.playlist;
   return (
-    <View className="playlist-detail">
-      <View
-        className="background_image"
-        style={{ background: `url(${coverImgUrl}) center no-repeat` }}
-      />
-      <View className="playlist_info">
-        <View className="header">
-          <PlayList src={coverImgUrl} count={playCount} />
-          <View className="info">
-            <View className="name">{name}</View>
-            <View className="creator">
-              <View
-                className="avatar"
-                style={{
-                  background: `url(${avatarUrl}) no-repeat`,
-                  backgroundSize: "cover",
-                }}
-              />
-              <View>{nickname}</View>
+    <View>
+      {!name ? (
+        "Loading"
+      ) : (
+        <View className="playlist-detail">
+          <View
+            className="background_image"
+            style={{ background: `url(${coverImgUrl}) center no-repeat` }}
+          />
+          <View className="playlist_info">
+            <View className="header">
+              <PlayList src={coverImgUrl} count={playCount} />
+              <View className="info">
+                <View className="name">{name}</View>
+                <View className="creator">
+                  <View
+                    className="avatar"
+                    style={{
+                      background: `url(${avatarUrl}) no-repeat`,
+                      backgroundSize: "cover",
+                    }}
+                  />
+                  <View>{nickname}</View>
+                </View>
+                {tags && (
+                  <View className="tags">
+                    {tags.map((item, index) => (
+                      <View key={index} className="tag">
+                        {item}
+                      </View>
+                    ))}
+                  </View>
+                )}
+              </View>
             </View>
-            <View className="tags">
-              {tags.map((item, index) => (
-                <View key={index} className="tag">
-                  {item}
+            {description && <View className="description">{description}</View>}
+          </View>
+          {tracks && (
+            <View className="songs">
+              {tracks.map((item, index) => (
+                <View
+                  key={item.id}
+                  className="song"
+                  onClick={() => {
+                    onPlay(item);
+                  }}
+                >
+                  <Song
+                    index={index}
+                    name={item.name}
+                    ar={item.ar}
+                    al={item.al}
+                    copyright={item.copyright}
+                    mv={item.mv || 0}
+                  />
                 </View>
               ))}
             </View>
-          </View>
+          )}
         </View>
-        <View className="description">{description}</View>
-      </View>
-      <View className="songs">
-        {tracks.map((item, index) => (
-          <Song
-            key={item.id}
-            index={index}
-            name={item.name}
-            ar={item.ar}
-            al={item.al}
-            copyright={item.copyright}
-            mv={item.mv}
-          />
-        ))}
-      </View>
+      )}
     </View>
   );
 };

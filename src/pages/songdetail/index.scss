@@ -1,0 +1,6 @@
+@import "../../base.scss";
+
+.song-detail {
+  @include flex-column;
+  align-items: flex-start;
+}

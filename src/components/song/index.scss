@@ -1,10 +1,6 @@
 @import "../../base.scss";
 
 .song {
-  @include flex-row;
-  width: 95%;
-  /* prettier-ignore */
-  margin: 5PX auto;
   .info {
     @include flex-row;
     width: 90%;
