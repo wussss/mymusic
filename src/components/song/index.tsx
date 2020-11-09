@@ -15,8 +15,6 @@ interface IProps {
     name: string;
   }; //album,专辑名
   copyright?: number; //版权
-  st?: number; //是否喜欢
-  current?: boolean; //是否播放中
   mv: number; //是否有mv
 }
 export const Song: Taro.FC<IProps> = (props) => {

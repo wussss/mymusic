@@ -1,6 +1,86 @@
 @import "../../base.scss";
-
-.song-detail {
-  @include flex-column;
-  align-items: flex-start;
+.song {
+  .song_container {
+    width: 100%;
+    height: 100%;
+    @include flex-column;
+    align-items: start;
+    .song_bk {
+      transform: scale(1.5);
+      transform-origin: center top;
+      position: fixed;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      /* prettier-ignore */
+      filter: blur(30PX) brightness(30%);
+      opacity: 0.6;
+      z-index: -100;
+    }
+    .disk_bk {
+      @include flex-column;
+      justify-content: flex-start;
+      margin: 0 auto;
+      height: 100%;
+      .icon {
+        /* prettier-ignore */
+        width: 110PX;
+        /* prettier-ignore */
+        height: 175PX;
+        /* prettier-ignore */
+        margin-left:40PX;
+        transform: rotate(0);
+        transform-origin: 0% 0%;
+        transition: transform 0.5s;
+        &.rotate {
+          transform: rotate(-20deg);
+          transform-origin: 0% 0%;
+          transition: transform 0.5s;
+        }
+      }
+      .disk {
+        /* prettier-ignore */
+        width:256PX;
+        /* prettier-ignore */
+        height:256PX;
+        /* prettier-ignore */
+        margin-top:-60PX;
+        z-index: -1;
+        .disk_info {
+          /* prettier-ignore */
+          width: 180PX;
+          /* prettier-ignore */
+          height:180PX;
+          border-radius: 50%;
+          /* prettier-ignore */
+          margin:38PX auto;
+          transform: rotate(0);
+          transform-origin: 50% 50%;
+          //transition: transform 10s;
+          &.rotate {
+            transform: rotate(360deg);
+            transform-origin: 50% 50%;
+            transition: transform 60s;
+          }
+        }
+      }
+    }
+    .slider{
+      margin: 0 auto;
+    }
+    .player {
+      @include flex-row;
+      /* prettier-ignore */
+      height:50PX;
+      width: 90%;
+      /* prettier-ignore */
+      margin: 100PX auto;
+      .iconfont {
+        /* prettier-ignore */
+        font-size:40PX;
+        color: white;
+      }
+    }
+  }
 }

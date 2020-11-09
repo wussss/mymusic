@@ -29,7 +29,7 @@ type IProps = StateProps & DispatchProps;
 const PlayListDetail: Taro.FC<IProps> = (props) => {
   const { id } = Taro.getCurrentInstance()?.router?.params || {};
   const newId = Number(id || 0);
-  //const newId: number = 423015580; //方便调试
+  //const newId: number = 5002317855; //方便调试
   const renderPage = () => {
     props.getPlayListDetail(newId);
   };
@@ -39,7 +39,7 @@ const PlayListDetail: Taro.FC<IProps> = (props) => {
     console.log("store will be clear");
   }); //页面卸载时
   const onPlay = (item: MusicItemType) => {
-    console.log(item.name);
+    console.log(item.name, item.id);
     Taro.navigateTo({ url: `../songdetail/index?id=${item.id}` });
   };
   const {
@@ -47,7 +47,7 @@ const PlayListDetail: Taro.FC<IProps> = (props) => {
     name,
     description,
     tags,
-    creator: { avatarUrl, nickname },
+    creator,
     tracks,
     playCount,
   } = props.playlist;
@@ -70,11 +70,11 @@ const PlayListDetail: Taro.FC<IProps> = (props) => {
                   <View
                     className="avatar"
                     style={{
-                      background: `url(${avatarUrl}) no-repeat`,
+                      background: `url(${creator.avatarUrl}) no-repeat`,
                       backgroundSize: "cover",
                     }}
                   />
-                  <View>{nickname}</View>
+                  <View>{creator.nickname}</View>
                 </View>
                 {tags && (
                   <View className="tags">

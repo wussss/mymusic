@@ -3,6 +3,8 @@ import {
   Get_Banners,
   Get_PlayList_Datail,
   Clear_PlayList_Datail,
+  Get_Song_Deatil,
+  Clear_Song_Detail,
 } from "../constants/action_type";
 import { IDefaultState } from "../constants/commonType";
 
@@ -22,6 +24,14 @@ const defaultState: IDefaultState = {
     trackIds: [],
     playCount: 0,
   },
+  song: {
+    name: "",
+    ar: [],
+    al: {
+      name: "",
+      picUrl: "",
+    },
+  },
 };
 export const home_reducer = (prevState = defaultState, action) => {
   const { type, payload } = action;
@@ -38,6 +48,12 @@ export const home_reducer = (prevState = defaultState, action) => {
     case Clear_PlayList_Datail:
       playlist = payload;
       return { ...prevState, playlist };
+    case Get_Song_Deatil:
+      let { song } = payload;
+      return { ...prevState, song };
+    case Clear_Song_Detail:
+      song = {};
+      return { ...prevState, song };
     default:
       return prevState;
   }

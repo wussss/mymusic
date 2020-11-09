@@ -2,21 +2,20 @@ export interface IDefaultState {
   recommendPlayList: Array<{}>; // 推荐歌单
   banners: Array<{}>; //首页banners
   playlist: playListDetailInfoType;
-}
-export interface currentSongInfoType {
-  id: number;
-  name: string;
+  song: MusicItemType;
 }
 export interface MusicItemType {
+  index?: number;
   name: string; //歌曲名字
-  id: number;
+  id?: number;
   ar: Array<{
     name: string;
   }>; //artist，演唱者
   al: {
     name: string;
+    picUrl: string;
   }; //album,专辑名
-  copyright: number; //版权
+  copyright?: number; //版权
   st?: number; //是否喜欢
   current?: boolean; //是否播放中
   mv?: number; //是否有mv

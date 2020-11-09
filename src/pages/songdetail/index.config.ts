@@ -1,3 +1,3 @@
 export default {
-  navigationBarTitleText: '歌曲详情'
-}
+  navigationBarTitleText: '加载中',
+};
