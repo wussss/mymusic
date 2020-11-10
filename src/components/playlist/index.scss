@@ -29,13 +29,14 @@
   .name {
     /* prettier-ignore */
     height:44PX;
-    overflow: hidden;
-    text-overflow: ellipsis;
+    /* prettier-ignore */
+    width: 105PX;
     /* prettier-ignore */
     margin-left:5PX;
     /* prettier-ignore */
     margin-top: -6PX;
     /* prettier-ignore */
     font-size:15PX;
+    overflow: hidden;
   }
 }

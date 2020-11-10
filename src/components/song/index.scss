@@ -21,7 +21,6 @@
         @include flex-row;
         width: 90%;
         justify-content: flex-start;
-        @include text-ellipsis;
         .dujia {
           border: 1px solid $primary-color;
           color: $primary-color;
@@ -32,11 +31,15 @@
           /* prettier-ignore */
           margin-right: 5PX;
         }
-        .zhuanji {
-          color: #524f4f;
-          /* prettier-ignore */
-          font-size: 13PX;
-          /* prettier-ignore */
+        .zhuanji{
+          @include text-ellipsis;
+          width:90%;
+          .zhuanji_name {
+            color: #524f4f;
+            /* prettier-ignore */
+            font-size: 13PX;
+            /* prettier-ignore */
+          }
         }
       }
     }

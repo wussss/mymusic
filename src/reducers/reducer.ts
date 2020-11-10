@@ -5,6 +5,8 @@ import {
   Clear_PlayList_Datail,
   Get_Song_Deatil,
   Clear_Song_Detail,
+  Get_My_Info,
+  Get_My_PlayList,
 } from "../constants/action_type";
 import { IDefaultState } from "../constants/commonType";
 
@@ -32,6 +34,24 @@ const defaultState: IDefaultState = {
       picUrl: "",
     },
   },
+  myInfo: {
+    account: {
+      id: 394135352,
+    },
+    profile: {
+      gender: 0,
+      avatarUrl: "",
+      nickname: "",
+      birthday: 0,
+      backgroundUrl: "",
+      defaultAvatar: false,
+      signature: "",
+      followeds: 0,
+      follows: 0,
+      playlistCount: 0,
+    },
+  },
+  myPlayList: [],
 };
 export const home_reducer = (prevState = defaultState, action) => {
   const { type, payload } = action;
@@ -54,6 +74,12 @@ export const home_reducer = (prevState = defaultState, action) => {
     case Clear_Song_Detail:
       song = {};
       return { ...prevState, song };
+    case Get_My_Info:
+      let { myInfo } = payload;
+      return { ...prevState, myInfo };
+    case Get_My_PlayList:
+      let { myPlayList } = payload;
+      return { ...prevState, myPlayList };
     default:
       return prevState;
   }

@@ -2,7 +2,7 @@
 import React, { useEffect } from "react";
 import Taro from "@tarojs/taro";
 import { useWillUnmount } from "use-lifecycle";
-import { View } from "@tarojs/components";
+import { View, Text } from "@tarojs/components";
 import { connect } from "react-redux";
 import {
   getPlayListDetail,
@@ -59,13 +59,18 @@ const PlayListDetail: Taro.FC<IProps> = (props) => {
         <View className="playlist-detail">
           <View
             className="background_image"
-            style={{ background: `url(${coverImgUrl}) center no-repeat` }}
+            style={{
+              background: `url(${coverImgUrl}) center no-repeat`,
+              backgroundSize: "cover",
+            }}
           />
           <View className="playlist_info">
             <View className="header">
               <PlayList src={coverImgUrl} count={playCount} />
               <View className="info">
-                <View className="name">{name}</View>
+                <View className="name">
+                  <Text>{name}</Text>
+                </View>
                 <View className="creator">
                   <View
                     className="avatar"

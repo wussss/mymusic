@@ -9,7 +9,6 @@
   height: 100%;
   .background_image {
     @include background_image;
-    background-size: cover;
   }
   .playlist_info {
     @include flex-column;
@@ -18,19 +17,19 @@
       @include flex-row;
       /* prettier-ignore */
       margin-top:5PX;
-      width: 100%;
       .info {
-        width: 60%;
         /* prettier-ignore */
-        margin-right: 20PX;
+        margin-left: 20PX;
         @include flex-column;
         align-items: flex-start;
         .name {
-          white-space: wrap;
           /* prettier-ignore */
           font-size:16PX;
+           /* prettier-ignore */
+          width:200PX;
           /* prettier-ignore */
           font-weight:bold;
+          white-space: wrap;
         }
         .creator {
           @include flex-row;

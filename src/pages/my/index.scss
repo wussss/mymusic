@@ -1,6 +1,116 @@
 @import "../../base.scss";
 
-.mypage{
+.mypage {
+  height: 100%;
+  .login {
+    @include flex-column;
+  }
+  .profile {
+    width: 100%;
+    /* prettier-ignore */
+    .background_image {
+      @include background_image;
+      opacity: 1;
+    }
+    .info {
+      @include flex-column;
+      color: white;
+      align-items: flex-start;
+      /* prettier-ignore */
+      margin: 10PX 15PX;
+      .avatar {
+        /* prettier-ignore */
+        width:80PX;
+        /* prettier-ignore */
+        height:80PX;
+        border-radius: 50%;
+        /* prettier-ignore */
+      }
+      .nickname {
+        /* prettier-ignore */
+        margin: 10PX 0;
+      }
+      .follow {
+        @include flex-row;
+        color: rgb(224, 220, 220);
+        /* prettier-ignore */
+        font-size:14PX;
+        .follows {
+          /* prettier-ignore */
+          margin-right:10PX;
+        }
+      }
+      .mygender {
+        @include flex-row;
+        margin: 10px 0;
+        .tag {
+          background: rgba(235, 179, 202, 0.5);
+          /* prettier-ignore */
+          margin-right:5PX;
+          /* prettier-ignore */
+          width:60PX;
+          /* prettier-ignore */
+          /* prettier-ignore */
+          border-radius: 5PX;
+          /* prettier-ignore */
+          border:none;
+          color: white;
+          text-align: center;
+          /* prettier-ignore */
+          font-size:14PX;
+          &.age {
+            @include flex-row;
+            justify-content: flex-start;
+            /* prettier-ignore */
+            padding-left:6PX;
+            .iconfont {
+              /* prettier-ignore */
+              font-size: 14PX;
+              color: $primary-color;
+            }
+          }
+        }
+      }
+    }
+    .playlists {
+      @include flex-column;
+      align-items: flex-start;
+      background: white;
+      width: 90%;
+      /* prettier-ignore */
+      border-radius:20PX;
+      /* prettier-ignore */
+      padding: 10PX;
+      margin: 0 auto;
+      .playlist {
+        @include flex-row;
+        /* prettier-ignore */
+        margin:10PX 0;
+        .cover {
+          /* prettier-ignore */
+          width:80PX;
+          /* prettier-ignore */
+          height:80PX;
+        }
+        .playlist_info {
+          /* prettier-ignore */
+          width:200PX;
+          /* prettier-ignore */
+          margin-left: 15PX;
+          .name {
+            @include text-ellipsis;
+            /* prettier-ignore */
+            margin-bottom:5PX;
+          }
+          .trackCount {
+            /* prettier-ignore */
+            font-size: 14PX;
+            color: rgb(204, 201, 201);
+          }
+        }
+      }
+    }
+  }
   .switch-tab {
     @include flex-row;
     position: fixed;

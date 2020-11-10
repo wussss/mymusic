@@ -51,7 +51,7 @@ const Index: Taro.FC<IProps> = (props) => {
   //     console.log(res.data.banners);
   //   });
   // };//测试拿到的数据类型
-  const getDetail = (id:number) => {
+  const getDetail = (id: number) => {
     navigateTo({
       url: `../playlistdetail/index?id=${id}`,
     });

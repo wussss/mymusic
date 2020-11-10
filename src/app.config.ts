@@ -1,8 +1,8 @@
 export default {
   pages: [
-    //'pages/playlistdetail/index',
-    'pages/index/index',
     'pages/my/index',
+    'pages/index/index',
+   // 'pages/my/index',
     'pages/playlistdetail/index',
     'pages/songdetail/index'
   ],

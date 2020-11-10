@@ -1,7 +1,7 @@
 /* eslint-disable jsx-quotes */
 import React from "react";
 import Taro from "@tarojs/taro";
-import { View } from "@tarojs/components";
+import { View, Text } from "@tarojs/components";
 import "../../statics/iconfont/iconfont.scss";
 import "./index.scss";
 
@@ -21,13 +21,15 @@ export const Song: Taro.FC<IProps> = (props) => {
   const { index, name, ar, al, copyright, mv } = props;
   return (
     <View className="song">
-      <View className='info'>
+      <View className="info">
         <View className="xuhao">{index + 1}</View>
         <View className="info1">
           <View>{name}</View>
           <View className="info2">
             {copyright === 0 && <View className="dujia">独家</View>}
-            <View className="zhuanji">{`${ar[0].name}-${al.name}`}</View>
+            <View className='zhuanji'>
+              <Text className="zhuanji_name">{`${ar[0].name}-${al.name}`}</Text>
+            </View>
           </View>
         </View>
       </View>

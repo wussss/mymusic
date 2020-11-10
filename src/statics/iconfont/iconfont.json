@@ -6,6 +6,20 @@
   "description": "",
   "glyphs": [
     {
+      "icon_id": "986671",
+      "name": "男",
+      "font_class": "nan",
+      "unicode": "e647",
+      "unicode_decimal": 58951
+    },
+    {
+      "icon_id": "1493224",
+      "name": "女",
+      "font_class": "nv",
+      "unicode": "e6e3",
+      "unicode_decimal": 59107
+    },
+    {
       "icon_id": "2767718",
       "name": "播放",
       "font_class": "icon-1",

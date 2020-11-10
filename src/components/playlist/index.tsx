@@ -1,7 +1,7 @@
 /* eslint-disable jsx-quotes */
 import React from "react";
 import Taro from "@tarojs/taro";
-import { View, Image } from "@tarojs/components";
+import { View, Image, Text } from "@tarojs/components";
 import { formatCount } from "../../utils/formatCount";
 import "../../statics/iconfont/iconfont.scss";
 import "./index.scss";
@@ -17,7 +17,11 @@ export const PlayList: Taro.FC<IProps> = (props) => {
     <View className="square">
       <Image src={src} />
       <View className="iconfont icon-icon- play">{formatCount(count)}</View>
-      {name && <View className="name">{name}</View>}
+      {name && (
+        <View className="name">
+          <Text>{name}</Text>
+        </View>
+      )}
     </View>
   );
 };

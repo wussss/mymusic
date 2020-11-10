@@ -3,6 +3,25 @@ export interface IDefaultState {
   banners: Array<{}>; //首页banners
   playlist: playListDetailInfoType;
   song: MusicItemType;
+  myInfo: PersonalInfoType;
+  myPlayList:Array<{}>
+}
+export interface PersonalInfoType {
+  account: {
+    id: number;
+  };
+  profile: {
+    gender: number; //性别
+    avatarUrl: string; //头像地址
+    nickname: string; //用户名
+    birthday: number; //生日
+    backgroundUrl: string; //背景图片地址
+    defaultAvatar: boolean; //是否默认头像
+    signature: string; //签名
+    followeds: number; //粉丝数
+    follows: number; //关注
+    playlistCount; //创建歌单数
+  };
 }
 export interface MusicItemType {
   index?: number;
