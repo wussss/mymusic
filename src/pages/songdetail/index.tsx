@@ -25,44 +25,65 @@ type IProps = StateProps & DispatchProps;
 const checkSong = (songId: number) => {
   api.get("/check/music", { id: songId }).then((res) => {
     if (res.data.success === false) {
-      Taro.showToast({
-        title: "暂无版权",
-        icon: "none",
+      console.log(res.data);
+      Taro.showModal({
+        title: "提示",
+        content: "暂无版权，是否返回歌单详情页?",
+        success: function (result) {
+          if (result.confirm) {
+            Taro.navigateBack({ delta: 1 });
+          } else if (result.cancel) {
+            console.log('取消')
+          }
+        },
       });
     }
   });
 }; //检查音乐是否有版权
-const audioContext = Taro.createInnerAudioContext();
+let audioContext = Taro.createInnerAudioContext();
 const SongDetail: Taro.FC<IProps> = (props) => {
   const { id } = Taro.getCurrentInstance()?.router?.params || {};
   const newId = Number(id || 0);
-  audioContext.src = `https://music.163.com/song/media/outer/url?id=${newId}.mp3`;
-  audioContext.onError((res) => {
-    console.log(res);
-  });
   const { name, al } = props.song;
   const [isPlaying, setPlaying] = useState(false);
-  const renderPage = () => {
-    props.getSongDetail(newId);
-    checkSong(newId);
-  };
   const onChangePlayStatus = () => {
     if (audioContext.paused) {
       setPlaying(!isPlaying);
       audioContext.play();
-      console.log("播放中", audioContext.paused);
+      console.log("播放");
     } else {
       setPlaying(!isPlaying);
       audioContext.stop();
-      console.log("暂停", audioContext.paused);
+      console.log("停止");
     }
   };
-  useEffect(renderPage, [newId]);
+  useEffect(() => {
+    checkSong(newId);
+  }, [newId]); //检查是否有版权,没有则不挂载页面
+  useEffect(() => {
+    audioContext = Taro.createInnerAudioContext();
+  }, []); //创建InnerAudioContext
+  useEffect(() => {
+    Taro.showLoading({
+      title: "Loading",
+    });
+    setTimeout(function () {
+      Taro.hideLoading();
+    }, 2000);
+  }, []); //Loading
+  audioContext.src = `https://music.163.com/song/media/outer/url?id=${newId}.mp3`;
+  audioContext.onError((res) => {
+    console.log(res);
+  });
+  useEffect(() => {
+    props.getSongDetail(newId);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [newId]); //更新页面
   useEffect(() => {
     Taro.setNavigationBarTitle({
       title: name ? name : "加载中",
     });
-  }, [name]);
+  }, [name]); //更新导航栏
   useWillUnmount(() => {
     props.clearSongDetail();
     audioContext.destroy();
