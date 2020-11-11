@@ -7,6 +7,7 @@ import {
   Clear_Song_Detail,
   Get_My_Info,
   Get_My_PlayList,
+  Login,
 } from "../constants/action_type";
 import { IDefaultState } from "../constants/commonType";
 
@@ -35,8 +36,8 @@ const defaultState: IDefaultState = {
     },
   },
   myInfo: {
-    account: {
-      id: 394135352,
+    userPoint: {
+      userId: 0,
     },
     profile: {
       gender: 0,
@@ -52,6 +53,7 @@ const defaultState: IDefaultState = {
     },
   },
   myPlayList: [],
+  userId: 0,
 };
 export const home_reducer = (prevState = defaultState, action) => {
   const { type, payload } = action;
@@ -80,6 +82,9 @@ export const home_reducer = (prevState = defaultState, action) => {
     case Get_My_PlayList:
       let { myPlayList } = payload;
       return { ...prevState, myPlayList };
+    case Login:
+      let { userId } = payload;
+      return { ...prevState, userId };
     default:
       return prevState;
   }

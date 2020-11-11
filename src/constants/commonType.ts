@@ -4,11 +4,12 @@ export interface IDefaultState {
   playlist: playListDetailInfoType;
   song: MusicItemType;
   myInfo: PersonalInfoType;
-  myPlayList:Array<{}>
+  myPlayList: Array<{}>;
+  userId:number
 }
 export interface PersonalInfoType {
-  account: {
-    id: number;
+  userPoint: {
+    userId: number;
   };
   profile: {
     gender: number; //性别

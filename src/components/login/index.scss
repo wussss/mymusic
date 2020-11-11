@@ -8,15 +8,52 @@
     border-radius: 5PX;
     width: 80%;
     /* prettier-ignore */
+    height: 180PX;
     margin: 20% auto;
+    /* prettier-ignore */
+    padding: 10PX 10PX;
     @include flex-column;
     /* prettier-ignore */
     border-radius: 5PX;
     box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.1);
+    .title {
+      /* prettier-ignore */
+      color: $primary-color;
+      margin-top: 10px;
+    }
     .input_list {
-      width:100%;
+      width: 90%;
+      /* prettier-ignore */
+      margin: 10PX auto;
       .input_item {
         @include inputView;
+        width: 100%;
+        @include flex-row;
+        justify-content: flex-start;
+        ::before {
+          /* prettier-ignore */
+          margin-right:10PX;
+        }
+        &.icon-mima {
+          /* prettier-ignore */
+          .iconfont{
+            font-size:18PX;
+            margin-left:55PX;
+          }
+        }
+      }
+    }
+    .button_list {
+      @include flex-row;
+      .cancel {
+        /* prettier-ignore */
+        margin-right:10PX;
+        color: rgb(148, 143, 143);
+        /* prettier-ignore */
+      }
+      .confirm {
+        background: $primary-color;
+        color: white;
       }
     }
   }

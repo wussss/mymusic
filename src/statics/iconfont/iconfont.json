@@ -6,6 +6,27 @@
   "description": "",
   "glyphs": [
     {
+      "icon_id": "859415",
+      "name": "闭眼",
+      "font_class": "biyan",
+      "unicode": "e611",
+      "unicode_decimal": 58897
+    },
+    {
+      "icon_id": "859467",
+      "name": "睁眼",
+      "font_class": "zhengyan",
+      "unicode": "e624",
+      "unicode_decimal": 58916
+    },
+    {
+      "icon_id": "14151838",
+      "name": "密码",
+      "font_class": "mima",
+      "unicode": "e632",
+      "unicode_decimal": 58930
+    },
+    {
       "icon_id": "986671",
       "name": "男",
       "font_class": "nan",

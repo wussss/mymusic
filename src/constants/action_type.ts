@@ -4,5 +4,6 @@ export const Get_PlayList_Datail: string = "Get_PlayList_Datail";
 export const Clear_PlayList_Datail: string = "Clear_PlayList_Datail";
 export const Get_Song_Deatil: string = "Get_Song_Deatil";
 export const Clear_Song_Detail: string = "Clear_Song_Detail";
+export const Login: string = "Login";
 export const Get_My_Info: string = "Get_My_Info";
 export const Get_My_PlayList: string = "Get_My_PlayList";
