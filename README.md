@@ -64,3 +64,33 @@ src
 - app.scss 入口样式文件
 
 - app.tsx 入口文件
+
+### 功能截图
+
+<div align="center">
+  <image src="https://raw.githubusercontent.com/wussss/mymusic/master/src/statics/screenshots/1.jpg"/>
+</div>
+
+<div align="center">
+  <image src="https://raw.githubusercontent.com/wussss/mymusic/master/src/statics/screenshots/2.jpg"/>
+</div>
+
+<div align="center">
+  <image src="https://raw.githubusercontent.com/wussss/mymusic/master/src/statics/screenshots/3.png"/>
+</div>
+
+<div align="center">
+  <image src="https://raw.githubusercontent.com/wussss/mymusic/master/src/statics/screenshots/4.png"/>
+</div>
+
+<div align="center">
+  <image src="https://raw.githubusercontent.com/wussss/mymusic/master/src/statics/screenshots/5.png"/>
+</div>
+
+<div align="center">
+  <image src="https://raw.githubusercontent.com/wussss/mymusic/master/src/statics/screenshots/6.png"/>
+</div>
+
+<div align="center">
+  <image src="https://raw.githubusercontent.com/wussss/mymusic/master/src/statics/screenshots/7.png"/>
+</div>
