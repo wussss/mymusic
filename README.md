@@ -41,7 +41,7 @@ export const baseUrl: string = 'http://localhost:3000' // 这里配置的这个u
 
 > 这里主要介绍下`src`目录，因为开发主要是在这个目录下进行的
 
-- src
+src
 
 - actions `redux`中的相关异步操作在这里进行
 
