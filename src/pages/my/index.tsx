@@ -38,6 +38,7 @@ const MyPage: Taro.FC<IProps> = (props) => {
   const LogOut = () => {
     api.get("/logout").then((res) => {
       console.log(res);
+      props.onLogin("", "");
       Taro.setStorageSync("userId", "");
       Taro.redirectTo({ url: "../index/index" });
     });

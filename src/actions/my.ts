@@ -8,7 +8,7 @@ export const onLogin = (phone: string, password: string) => {
       .get("/login/cellphone", { phone: phone, password: password })
       .then((res) => {
         let userId: number = 0;
-        userId = res.data?.account?.id;
+        userId = res.data?.account?.id || 0;
         const action = {
           type: Login,
           payload: { userId },

@@ -16,7 +16,6 @@ import "./index.scss";
 import { PlayList } from "../../components/playlist/index";
 import { Banner } from "../../components/banner/index";
 import { getRecommendPlayList, getBanner } from "../../actions/home_action"; //1、定义组件自己的异步方法
-import api from "../../services/api";
 
 interface StateProps {
   recommendPlayList: Array<{
