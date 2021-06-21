@@ -1,3 +1,3 @@
 export default {
-  navigationBarTitleText: 'Taro项目'
-}
+  navigationBarTitleText: "网易云音乐",
+};
